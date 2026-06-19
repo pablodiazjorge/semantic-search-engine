@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Paleta cálida y con carácter */
+  --primary: #d97706;
+  --primary-dark: #b45309;
+  --secondary: #065f46;
+  --accent: #f97316;
+  --accent-soft: #ffedd5;
+  --background: #fff7ed;
+  --surface: #ffffff;
+  --surface-warm: #fffaf5;
+  --text: #292524;
+  --text-muted: #78716c;
+  --border: #d6d3d1;
+  --border-strong: #a8a29e;
+
+  --shadow-hard: 6px 6px 0px 0px rgba(41, 37, 36, 0.12);
+  --shadow-hover: 10px 10px 0px 0px rgba(41, 37, 36, 0.18);
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+
+  background-image: radial-gradient(circle, #d6d3d1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease-out both;
+}

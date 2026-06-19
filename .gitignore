@@ -1,0 +1,61 @@
+# ========================
+# OS & Editor files
+# ========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ========================
+# IDE & Editors
+# ========================
+.idea/
+*.iml
+.vscode/
+*.sublime-workspace
+
+# ========================
+# Environment & secrets
+# ========================
+.env
+!.env.example
+*.local
+*.secret
+
+# ========================
+# Backend – Java / Maven
+# ========================
+backend/target/
+backend/*.jar
+backend/*.war
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/mvnw
+backend/mvnw.cmd
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/bin/
+
+# ========================
+# Frontend – Angular / Node
+# ========================
+frontend/node_modules
+frontend/dist
+frontend/.angular
+frontend/.cache
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-error.log*
+
+# ========================
+# Docker
+# ========================
+postgres-data/
+pgdata/
+
+# ========================
+# Misc
+# ========================
+*.tmp
+*.bak
