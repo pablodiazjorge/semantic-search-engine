@@ -1,5 +1,7 @@
 # Semantic Search Engine (January 2024 - June 2024)
 
+> **Snapshot (2024).** Published in 2026, keeping the stack of the time; not maintained. Limitations: a vector search skeleton with simulated embeddings (`EmbeddingService.java:19-28`), and Postgres on `0.0.0.0:5432` with the default password, for local development only. See [Limitations](#limitations).
+
 Corporate semantic search engine with vector storage in PostgreSQL.
 This project demonstrates how to build an embedding-based information retrieval system using Spring Boot, Angular, PostgreSQL and the pgvector extension.
 
@@ -240,6 +242,12 @@ npm start
 ```
 
 The application will be available at [http://localhost:4200](http://localhost:4200).
+
+## Limitations
+
+- **The embeddings are simulated.** `EmbeddingService.generateEmbedding` (`backend/src/main/java/com/pablo/semanticsearch/service/EmbeddingService.java:19-28`) ignores the text and returns a normalized random 384-dimensional vector, a new one on every call. Storage, the HNSW index and the cosine query are real, but the ranking is random, not semantic. Plugging in a real embedding model is the missing piece.
+- **The database setup is for local development only.** `docker-compose.yml` publishes Postgres as `5432:5432`, which listens on every interface (`0.0.0.0:5432`), and the stack falls back to the default user and password from `.env.example` (also the fallback in `application.yml`). Change both before running it anywhere but your own machine.
+- **There are no tests.** Neither the backend nor the frontend has any.
 
 ## License
 
